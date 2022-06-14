@@ -17,7 +17,8 @@ function App() {
   return (
     <div className="App" id={theme}>
       <ThemeContext.Provider value={{theme, setTheme, materielleModal, setMaterielleModal}}>
-        <BrowserRouter>
+        <Home />
+        {/* <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -25,7 +26,7 @@ function App() {
               <Route path="/ux-ui" element={<UxUi />} />
               <Route path="/arcade" element={<Arcade />} />
           </Routes>
-        </BrowserRouter>
+        </BrowserRouter> */}
       </ThemeContext.Provider>
     </div>
   );
