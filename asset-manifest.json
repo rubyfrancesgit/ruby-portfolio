@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ruby-portfolio/static/css/main.afdedecf.css",
-    "main.js": "/ruby-portfolio/static/js/main.51db3a23.js",
+    "main.js": "/ruby-portfolio/static/js/main.d0f974bc.js",
     "static/media/able-swap-square.png": "/ruby-portfolio/static/media/able-swap-square.2c882320c9c317f2375e.png",
     "static/media/stay-nz-square.png": "/ruby-portfolio/static/media/stay-nz-square.45963c1e5286f5ab529c.png",
     "static/media/materielle-square.png": "/ruby-portfolio/static/media/materielle-square.340dd89959f11810b590.png",
@@ -63,10 +63,10 @@
     "static/media/small-star-yellow.svg": "/ruby-portfolio/static/media/small-star-yellow.5797674066e1854e0b0781fb9c1a4418.svg",
     "static/media/small-star.svg": "/ruby-portfolio/static/media/small-star.5247f7f31e049809acb7113fb864514a.svg",
     "main.afdedecf.css.map": "/ruby-portfolio/static/css/main.afdedecf.css.map",
-    "main.51db3a23.js.map": "/ruby-portfolio/static/js/main.51db3a23.js.map"
+    "main.d0f974bc.js.map": "/ruby-portfolio/static/js/main.d0f974bc.js.map"
   },
   "entrypoints": [
     "static/css/main.afdedecf.css",
-    "static/js/main.51db3a23.js"
+    "static/js/main.d0f974bc.js"
   ]
 }
