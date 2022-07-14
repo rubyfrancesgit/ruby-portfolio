@@ -1,4 +1,4 @@
-.eightball-game {
+#light .eightball-game {
     width: 100%;
     @include center;
     flex-direction: column;
@@ -22,6 +22,32 @@
         cursor: pointer;
         text-align: center;
     }
+}
+
+#dark .eightball-game {
+  width: 100%;
+  @include center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  &__answer {
+      @include p-text-darkmode;
+      font-size: 3rem;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+  }
+
+  &__8ball {
+      font-size: 10rem;
+      cursor: pointer;
+      text-align: center;
+  }
 }
 
 .fade-in {

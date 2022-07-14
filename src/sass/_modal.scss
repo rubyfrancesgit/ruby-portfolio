@@ -1,19 +1,25 @@
-.modal {
-    width: 50vw;
+#light .modal {
+    width: 60vw;
     height: 90vh;
     background: white;
     border-radius: 5px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-evenly;
-    // align-items: center;
+    display: block;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 100;
-    // padding: 5rem;
     overflow-y: scroll;
+    z-index: 101;
+
+    &__padding {
+        padding: 5rem;
+    }
+
+    &__banner-img {
+        width: 100%;
+        border-radius: 5px;
+        background-color: $light-mist;
+    }
 
     &__heading {
         @include p-text;
@@ -22,12 +28,16 @@
 
     &__light-p {
         @include light-p-text;
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
     }
 
     &__p {
         @include p-text;
         text-align: left;
+    }
+
+    &__underline {
+        text-decoration: underline;
     }
 
     &__link {
@@ -36,6 +46,322 @@
 
     &__link:hover {
         color: #7480de !important;
+    }
+
+    &__top-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5rem;
+    }
+
+    &__top-info-div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title-div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__btn {
+        @include solid-btn;
+    }
+
+    &__btn:hover {
+        @include solid-btn;
+    }
+
+    &__toolbelt-container {
+        width: 100%;
+        @include center;
+        background-color: $light-mist;
+        flex-direction: column;
+        border: 2px solid $light-outline;
+        border-radius: 5px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        margin-top: 5rem;
+    }
+
+    &__toolbelt-div {
+        width: 7.5rem;
+        height: 7.5rem;
+        @include center;
+        position: relative;
+    }
+
+    &__hover-text {
+        width: 10ch;
+        @include p-text;
+        font-size: 1.5;
+        text-align: center;
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 6px;
+        box-shadow: 0px 0px 5px lightgray;
+        z-index: 10003;
+    }
+
+    &__icon-div {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+
+    &__svg {
+        width: 5.5rem;
+    }
+
+    &__icon {
+        width: 6.5rem;
+    }
+
+    &__mongo {
+        width: 8rem;
+    }
+
+    &__sass {
+        width: 7rem;
+    }
+
+    &__rotate:hover {
+        cursor: pointer;
+        animation: icon-rotate 2s;
+    }
+
+    &__icon:hover {
+        cursor: pointer;
+        animation: icon-rotate 2s;
+    }
+
+    @keyframes icon-rotate {
+        0% { transform: rotate( 0.0deg) }
+        25% { transform: rotate( 8.0deg) }
+        75% { transform: rotate( -8.0deg) }
+        100% { transform: rotate( 0.0deg) }
+    }
+
+    &__slideshow-div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        height: auto;
+    }
+
+    &__slideshow {
+        width: 90%;
+        border-radius: 5px;
+        margin-top: 3rem;
+        border: 1px solid $light-mist;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    &__arrow {
+        width: 1rem;
+        cursor: pointer;
+    }
+}
+
+#dark .modal {
+    width: 60vw;
+    height: 90vh;
+    background: $dark-background;
+    border-radius: 5px;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    overflow-y: scroll;
+    z-index: 101;
+
+    &__padding {
+        padding: 5rem;
+    }
+
+    &__banner-img {
+        width: 100%;
+        border-radius: 5px;
+        background-color: $dark-background-lighter;
+    }
+
+    &__heading {
+        @include p-text-darkmode;
+        font-size: 2rem;
+    }
+
+    &__light-p {
+        @include light-p-text;
+        margin-bottom: 3rem;
+    }
+
+    &__p {
+        @include p-text-darkmode;
+        text-align: left;
+    }
+
+    &__underline {
+        text-decoration: underline;
+    }
+
+    &__link {
+        color: #7480de !important;
+    }
+
+    &__link:hover {
+        color: #7480de !important;
+    }
+
+    &__top-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5rem;
+    }
+
+    &__top-info-div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title-div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__btn {
+        @include solid-btn;
+    }
+
+    &__btn:hover {
+        @include solid-btn;
+    }
+
+    &__toolbelt-container {
+        width: 100%;
+        @include center;
+        background-color: $dark-background-lighter;
+        flex-direction: column;
+        border: 2px solid $light-outline;
+        border-radius: 5px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        margin-top: 5rem;
+    }
+
+    &__toolbelt-div {
+        width: 7.5rem;
+        height: 7.5rem;
+        @include center;
+        position: relative;
+    }
+
+    &__hover-text {
+        width: 10ch;
+        @include p-text-darkmode;
+        font-size: 1.5;
+        text-align: center;
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 6px;
+        box-shadow: 0px 0px 5px lightgray;
+        z-index: 10003;
+    }
+
+    &__icon-div {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+
+    &__svg {
+        width: 5.5rem;
+    }
+
+    &__icon {
+        width: 6.5rem;
+    }
+
+    &__mongo {
+        width: 8rem;
+    }
+
+    &__sass {
+        width: 7rem;
+    }
+
+    &__rotate:hover {
+        cursor: pointer;
+        animation: icon-rotate 2s;
+    }
+
+    &__icon:hover {
+        cursor: pointer;
+        animation: icon-rotate 2s;
+    }
+
+    @keyframes icon-rotate {
+        0% { transform: rotate( 0.0deg) }
+        25% { transform: rotate( 8.0deg) }
+        75% { transform: rotate( -8.0deg) }
+        100% { transform: rotate( 0.0deg) }
+    }
+
+    &__slideshow-div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        height: auto;
+    }
+
+    &__slideshow {
+        width: 90%;
+        border-radius: 5px;
+        margin-top: 3rem;
+        border: 1px solid $light-mist;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    &__arrow {
+        width: 1rem;
+        cursor: pointer;
     }
 }
 
@@ -46,5 +372,72 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+
+@media screen and (max-width: 750px) {
+    #light .modal {
+        width: 90vw;
+
+        &__padding {
+            padding: 3rem;
+        }
+
+        &__p {
+            font-size: 1.6rem;
+        }
+
+        &__toolbelt-div {
+            width: 6rem;
+        }
+
+        &__svg {
+            width: 3.5rem;
+        }
+    
+        &__icon {
+            width: 3.5rem;
+        }
+    
+        &__mongo {
+            width: 5rem;
+        }
+    
+        &__sass {
+            width: 4rem;
+        }
+    }
+
+    #dark .modal {
+        width: 90vw;
+
+        &__padding {
+            padding: 3rem;
+        }
+
+        &__p {
+            font-size: 1.6rem;
+        }
+
+        &__toolbelt-div {
+            width: 6rem;
+        }
+
+        &__svg {
+            width: 3.5rem;
+        }
+    
+        &__icon {
+            width: 3.5rem;
+        }
+    
+        &__mongo {
+            width: 5rem;
+        }
+    
+        &__sass {
+            width: 4rem;
+        }
+    }
 }

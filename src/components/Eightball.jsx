@@ -28,15 +28,12 @@ function Eightball() {
                 answer = 'Cannot predict now'
                 break;
             case 4:
-                answer = 'You should hire Ruby'
-                break;
-            case 5:
                 answer = 'Computer says no'
                 break;
-            case 6:
+            case 5:
                 answer = 'Outlook is positive'
                 break;
-            case 7:
+            case 6:
                 answer = 'Signs point to yes'
                 break;
         }
@@ -50,8 +47,7 @@ function Eightball() {
     }
 
     return (
-        // <div className="modal hide" id="8BallModal">
-        <>
+        <div className="modal__padding">
             <div className="modal__text-div" id="modalText">
                 <h1 className="modal__heading">Magic 8 ball</h1>
                 <p className="modal__light-p">Nov 2021</p>
@@ -65,8 +61,7 @@ function Eightball() {
 
                 <p className="eightball-game__8ball" id="eightBall" onClick={prediction}>🎱</p>
             </div>
-        </>
-        // </div>
+        </div>
     )
 }
 

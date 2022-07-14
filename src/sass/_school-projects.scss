@@ -1,9 +1,5 @@
 #light .school-projects {
     width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
     padding-top: 15vh;
     padding-left: 10vw;
     padding-right: 10vw;
@@ -24,10 +20,22 @@
         margin-bottom: 2rem;
     }
 
+    &__intro-p {
+        @include p-text;
+        width: 45vw;
+        text-align: right;
+    }
+
     &__p {
         @include p-text;
-        width: 65ch;
-        text-align: right;
+        margin-bottom: 1rem;
+    }
+
+    &__title {
+        @include p-text-darkmode;
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 1rem;
     }
 
     &__projects-container {
@@ -45,9 +53,40 @@
         box-shadow: 5px 5px 10px $text-colour;
         margin: 1rem;
         margin-right: 5rem;
+        margin-bottom: 5rem;
         cursor: pointer;
         flex-shrink: 0;
-        margin-bottom: 5rem;
+        position: relative;
+    }
+
+    &__hover-info {
+        width: 100%;
+        height: 100%;
+        @include center;
+        flex-direction: column;
+        background-color: #000000bf;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1rem;
+        left: 0;
+        right: 0;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+
+    &__info-p {
+        @include p-text-darkmode;
+        margin-bottom: 1rem;
+    }
+
+    &__hover-info:hover {
+        animation: info-text-hover .5s;
+    }
+
+    @keyframes info-text-hover {
+        0% { background-color: transparent }
+        100% { background-color: #000000bf }
     }
 
     &__project-div-b-g {
@@ -79,16 +118,13 @@
         @include center;
         flex-direction: column;
         position: absolute;
+        padding: 1rem;
         top: 50%;
         left: 50%;
     }
 
     &__btn {
-        @include center;
-        @include p-text;
-        background-color: $feature-blue;
-        border-radius: 360px;
-        padding: 6px;
+        @include solid-btn;
     }
 
     &__bottom-left-star-div {
@@ -139,15 +175,10 @@
 
 #dark .school-projects {
     width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
     padding-top: 15vh;
     padding-left: 10vw;
     padding-right: 10vw;
     padding-bottom: 15vh;
-    background-color: $dark-background;
 
     &__text-div {
         width: 100%;
@@ -164,10 +195,22 @@
         margin-bottom: 2rem;
     }
 
+    &__intro-p {
+        @include p-text-darkmode;
+        width: 45vw;
+        text-align: right;
+    }
+
     &__p {
         @include p-text-darkmode;
-        width: 65ch;
-        text-align: right;
+        margin-bottom: 1rem;
+    }
+
+    &__title {
+        @include p-text-darkmode;
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 1rem;
     }
 
     &__projects-container {
@@ -181,7 +224,7 @@
         width: 25rem;
         height: 25rem;
         @include center;
-        border: 12px solid $dark-background;
+        border: 12px solid $dark-background-lighter;
         box-shadow: 5px 5px 10px rgb(29, 29, 29);
         margin: 1rem;
         margin-right: 5rem;
@@ -196,12 +239,14 @@
         height: 100%;
         @include center;
         flex-direction: column;
-        background-color: #0000009c;
+        background-color: #000000bf;
         position: absolute;
         margin-left: auto;
         margin-right: auto;
+        padding: 1rem;
         left: 0;
         right: 0;
+        transform: translate(-50%,-50%);
         text-align: center;
     }
 
@@ -211,7 +256,7 @@
 
     @keyframes info-text-hover {
         0% { background-color: transparent }
-        100% { background-color: #0000009c }
+        100% { background-color: #000000bf }
     }
 
     &__project-div-b-g {
@@ -243,17 +288,18 @@
         @include center;
         flex-direction: column;
         position: absolute;
+        padding: 1rem;
         top: 50%;
         left: 50%;
-        // transform: translate(-50%, -50%);
+    }
+
+    &__info-p {
+        @include p-text-darkmode;
+        margin-bottom: 1rem;
     }
 
     &__btn {
-        @include center;
-        @include p-text-darkmode;
-        background-color: $feature-blue;
-        border-radius: 360px;
-        padding: 6px;
+        @include solid-btn;
     }
 
     &__bottom-left-star-div {
@@ -299,5 +345,61 @@
         50% { transform: scale(1) }
         75% { transform: scale(1.3) }
         100% { transform: scale(1) }
+    }
+}
+
+// media queries/responsive design
+@media only screen and (max-width: 600px) {
+    #dark .school-projects {
+
+        &__projects-container {
+            justify-content: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #dark .school-projects {
+        &__intro-p {
+            width: 100%;
+            text-align: left;
+        }
+
+        &__projects-container {
+            justify-content: center;
+        }
+
+        &__project-div {
+            justify-content: center;
+            margin: 0px;
+            margin-bottom: 5rem;
+        }
+
+        &__text-div {
+            align-items: flex-start;
+            padding-right: 0rem;
+        }
+    }
+
+    #light .school-projects {
+        &__intro-p {
+            width: 100%;
+            text-align: left;
+        }
+
+        &__projects-container {
+            justify-content: center;
+        }
+
+        &__project-div {
+            justify-content: center;
+            margin: 0px;
+            margin-bottom: 5rem;
+        }
+
+        &__text-div {
+            align-items: flex-start;
+            padding-right: 0rem;
+        }
     }
 }

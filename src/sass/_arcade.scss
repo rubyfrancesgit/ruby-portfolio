@@ -1,11 +1,12 @@
-#dark .arcade {
+#light .arcade {
+
     &__intro {
         width: 100vw;
         height: 85vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-image: url('../assets/arcade-dark.svg');
+        background-image: url('../assets/arcade-light.svg');
         background-repeat: no-repeat;
         background-position: center top;
         -webkit-background-size: cover;
@@ -17,13 +18,25 @@
     }
 
     &__heading {
-        @include heading-darkmode;
+        @include heading;
         margin-bottom: 2rem;
     }
 
     &__p {
         width: 55ch;
+        @include p-text;
+    }
+
+    &__title {
         @include p-text-darkmode;
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__play-btn {
+        @include solid-btn;
+        width: 8rem;
     }
 
     &__img {
@@ -31,16 +44,16 @@
     }
 
     &__top-right-star-div {
+        display: none;
+    }
+
+    &__top-right-star-div-yellow {
         width: 25vw;
         height: 35vh;
         position: absolute;
         top: 0%;
         left: 60%;
         transform: translate(0%, -10%);
-    }
-
-    &__top-right-star-div-yellow {
-        display: none;
     }
 
     &__twinkle:hover {
@@ -78,22 +91,51 @@
     }
 
     &__container {
-        width: 100%;
-        padding-top: 5rem;
-        padding-left: 10rem;
-        padding-right: 10rem;
-        padding-bottom: 2rem;
+        width: 100vw;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 2rem;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        padding-bottom: 15vh;
     }
 
     &__card {
         width: 25rem;
         height: 25rem;
         @include center;
-        border: 12px solid $dark-background-lighter;
-        box-shadow: 5px 5px 10px rgb(29, 29, 29);
+        border: 12px solid white;
+        box-shadow: 5px 5px 10px $text-colour;
+        margin: 1rem;
         margin-right: 5rem;
+        margin-bottom: 5rem;
         cursor: pointer;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    &__hover-info {
+        width: 100%;
+        height: 100%;
+        @include center;
+        flex-direction: column;
+        background-color: #000000bf;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    &__hover-info:hover {
+        animation: info-text-hover .5s;
+    }
+
+    @keyframes info-text-hover {
+        0% { background-color: transparent }
+        100% { background-color: #000000bf }
     }
 
     &__card-b-g {
@@ -122,14 +164,15 @@
     }
 }
 
-#light .arcade {
+#dark .arcade {
+
     &__intro {
         width: 100vw;
         height: 85vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-image: url('../assets/arcade-light.svg');
+        background-image: url('../assets/arcade-dark.svg');
         background-repeat: no-repeat;
         background-position: center top;
         -webkit-background-size: cover;
@@ -141,13 +184,25 @@
     }
 
     &__heading {
-        @include heading;
+        @include heading-darkmode;
         margin-bottom: 2rem;
     }
 
     &__p {
         width: 55ch;
-        @include p-text;
+        @include p-text-darkmode;
+    }
+
+    &__title {
+        @include p-text-darkmode;
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__play-btn {
+        @include solid-btn;
+        width: 8rem;
     }
 
     &__img {
@@ -155,16 +210,16 @@
     }
 
     &__top-right-star-div {
-        display: none;
-    }
-
-    &__top-right-star-div-yellow {
         width: 25vw;
         height: 35vh;
         position: absolute;
         top: 0%;
         left: 60%;
         transform: translate(0%, -10%);
+    }
+
+    &__top-right-star-div-yellow {
+        display: none;
     }
 
     &__twinkle:hover {
@@ -202,21 +257,51 @@
     }
 
     &__container {
-        width: 100%;
-        padding-left: 10rem;
-        padding-right: 10rem;
-        padding-bottom: 2rem;
+        width: 100vw;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 2rem;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        padding-bottom: 15vh;
     }
 
     &__card {
-        width: 18rem;
-        height: 18rem;
+        width: 25rem;
+        height: 25rem;
         @include center;
-        border: 8px solid white;
-        box-shadow: 3px 3px 5px lightgray;
+        border: 12px solid $dark-background-lighter;
+        box-shadow: 5px 5px 10px rgb(29, 29, 29);
+        margin: 1rem;
         margin-right: 5rem;
+        margin-bottom: 5rem;
         cursor: pointer;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    &__hover-info {
+        width: 100%;
+        height: 100%;
+        @include center;
+        flex-direction: column;
+        background-color: #000000bf;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    &__hover-info:hover {
+        animation: info-text-hover .5s;
+    }
+
+    @keyframes info-text-hover {
+        0% { background-color: transparent }
+        100% { background-color: #000000bf }
     }
 
     &__card-b-g {
@@ -242,5 +327,66 @@
 
     &__big-emoji {
         font-size: 10rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #light .arcade {
+        &__intro {
+            padding-left: 10vw;
+            padding-right: 10vw;
+            background-image: none;
+        }
+
+        &__p {
+            width: 100%;
+        }
+
+        &__top-right-star-div-yellow {
+            width: 55vw;
+            left: 45%;
+        }
+
+        &__top-right-star-div {
+            width: 55vw;
+            left: 45%;
+        }
+
+        &__container {
+            justify-content: center;
+        }
+
+        &__card {
+            justify-content: center;
+            margin: 0px;
+            margin-bottom: 5rem;
+        }
+    }
+
+    #dark .arcade {
+        &__intro {
+            padding-left: 10vw;
+            padding-right: 10vw;
+            background-image: none;
+        }
+
+        &__p {
+            width: 100%;
+        }
+        
+        &__top-right-star-div {
+            width: 55vw;
+            left: 45%;
+        }
+
+        &__container {
+            justify-content: center;
+        }
+
+        &__card {
+            justify-content: center;
+            margin: 0px;
+            margin-bottom: 5rem;
+        }
     }
 }

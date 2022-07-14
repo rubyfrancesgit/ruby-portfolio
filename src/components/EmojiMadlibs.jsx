@@ -129,7 +129,7 @@ function EmojiMadlibs() {
     }
 
     return (
-        <>
+        <div className="modal__padding">
             <div className="modal__text-div" id="modalText">
                 <h1 className="modal__heading">Emoji Mad Libs</h1>
                 <p className="modal__light-p">Nov 2021 & Apr 2022</p>
@@ -210,7 +210,7 @@ function EmojiMadlibs() {
                     
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

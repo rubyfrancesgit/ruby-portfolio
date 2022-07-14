@@ -20,52 +20,52 @@ function ArcadeIntro() {
   const [fruitchiModalClasses, setFruitchiModalClasses] = useState("modal hide");
 
   function launch8BallModal() {
-      setModalBackgroundClasses("modal-background");
-      setEightBallModalClasses("modal");
+    setModalBackgroundClasses("modal-background");
+    setEightBallModalClasses("modal");
   } 
 
   function launchMadLibsModal() {
-      setModalBackgroundClasses("modal-background");
-      setMadLibsModalClasses("modal");
+    setModalBackgroundClasses("modal-background");
+    setMadLibsModalClasses("modal");
   } 
 
   function launchFruitchiModal() {
-      setModalBackgroundClasses("modal-background");
-      setFruitchiModalClasses("modal");
+    setModalBackgroundClasses("modal-background");
+    setFruitchiModalClasses("modal");
   } 
 
-  function clodeModal() {
-      setModalBackgroundClasses("modal-background hide");
-      setMadLibsModalClasses("modal hide");
-      setEightBallModalClasses("modal hide");
-      setFruitchiModalClasses("modal hide");
+  function closeModal() {
+    setModalBackgroundClasses("modal-background hide");
+    setMadLibsModalClasses("modal hide");
+    setEightBallModalClasses("modal hide");
+    setFruitchiModalClasses("modal hide");
   }
 
   const showHoverInfo = (id) => {
-      // document.getElementById(id).classList.remove("hide");
-      console.log('hover');
+    document.getElementById(id).classList.remove("hide");
+    console.log('hover');
   }
 
   const hideHoverInfo = (id) => {
-      // document.getElementById(id).classList.add("hide");
+      document.getElementById(id).classList.add("hide");
       console.log('hover');
   }
   
   return (
     <>
-      <center className={eightBallModalClasses} id="8BallModal">
+      <center className={eightBallModalClasses}>
           <Eightball />
       </center>
 
-      <center className={madLibsModalClasses} id="madLibsModal">
+      <center className={madLibsModalClasses}>
           <EmojiMadlibs />
       </center>
 
-      <center className={fruitchiModalClasses} id="apiModal">
+      <center className={fruitchiModalClasses}>
           <FruitchiPets />
       </center>
 
-      <center className={modalBackgroundClasses} id="modalBackground" onClick={clodeModal}>
+      <center className={modalBackgroundClasses} onClick={closeModal}>
       </center>
 
       <div className="arcade">
@@ -75,7 +75,7 @@ function ArcadeIntro() {
           Founder and president of the Coding Games Club at Yoobee! I wanted to create a space where students could have fun with their code and get creative: somewhere to explore code without parameters (coding joke haha).
           <br />
           <br />
-          When I first started learning Javascript, I started making little games in my spare time to help me understand its logic and structure. These little games became the building blocks for my coding foundation!
+          When I first started learning Javascript, I coded games in my spare time to help me understand its logic and structure. These little games became the building blocks for my coding foundation!
           </p>
 
           <div className="arcade__top-right-star-div">
@@ -92,30 +92,30 @@ function ArcadeIntro() {
         </div>
 
         <div className="arcade__container">
-          <div className="arcade__card arcade__card-o-p" onClick={launchFruitchiModal}>
+          <div className="arcade__card arcade__card-o-p" onMouseOver={() => showHoverInfo("fruitchiPetsInfo")}  onMouseOut={() => hideHoverInfo("fruitchiPetsInfo")}>
               <img className="arcade__img" src={orangeFruitchi} alt="cartoon orange character" />
 
-              <div className="arcade__text-div hide">
-                  <p className="arcade__p">Fruitchi pets</p>
-                  <button className="arcade__play-btn">Play</button>
+              <div className="arcade__hover-info hide" id="fruitchiPetsInfo">
+                  <p className="arcade__title">Fruitchi pets</p>
+                  <button className="arcade__play-btn" onClick={launchFruitchiModal}>Play</button>
               </div>
           </div>
 
-          <div className="arcade__card arcade__card-b-g" onClick={launch8BallModal} onMouseOver={() => showHoverInfo("8BallInfo")}  onMouseOut={() => hideHoverInfo("8BallInfo")} >
+          <div className="arcade__card arcade__card-b-g" onMouseOver={() => showHoverInfo("8BallInfo")}  onMouseOut={() => hideHoverInfo("8BallInfo")} >
               <p className="arcade__big-emoji">🎱</p>
 
-              <div className="arcade__text-div hide" id="8BallInfo">
-                  <p className="arcade__p">Magic 8 ball</p>
-                  <button className="arcade__play-btn">Play</button>
+              <div className="arcade__hover-info hide" id="8BallInfo">
+                  <p className="arcade__title">Magic 8 ball</p>
+                  <button className="arcade__play-btn" onClick={launch8BallModal}>Play</button>
               </div>
           </div>
 
-          <div className="arcade__card arcade__card-p-b" onClick={launchMadLibsModal}>
+          <div className="arcade__card arcade__card-p-b" onMouseOver={() => showHoverInfo("emojiMadLibsInfo")} onMouseOut={() => hideHoverInfo("emojiMadLibsInfo")}>
               <p className="arcade__big-emoji">🐸</p>
 
-              <div className="arcade__text-div hide">
-                  <p className="arcade__p">Emoji mad libs</p>
-                  <button className="arcade__play-btn">Play</button>
+              <div className="arcade__hover-info hide" id="emojiMadLibsInfo">
+                  <p className="arcade__title">Emoji mad libs</p>
+                  <button className="arcade__play-btn" onClick={launchMadLibsModal}>Play</button>
               </div>
           </div>
         </div>
