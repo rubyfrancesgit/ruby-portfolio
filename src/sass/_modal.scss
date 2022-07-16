@@ -285,7 +285,7 @@
         @include p-text-darkmode;
         font-size: 1.5;
         text-align: center;
-        background-color: white;
+        background-color: $dark-background-lighter;
         border: 1px solid white;
         border-radius: 5px;
         position: absolute;
