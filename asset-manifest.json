@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.974b1b35.css",
-    "main.js": "/static/js/main.59c45f91.js",
+    "main.css": "/static/css/main.f142831b.css",
+    "main.js": "/static/js/main.334145b9.js",
     "static/media/stayNz-mockups.svg": "/static/media/stayNz-mockups.f93995b7f44a9176aeed44ee63e12ae5.svg",
     "static/media/earthenwares-mockups.svg": "/static/media/earthenwares-mockups.2b5da2874e4335342baab2f648cd6baf.svg",
     "static/media/able-mockup-page.svg": "/static/media/able-mockup-page.06695a053065f09c90278a888dad8f77.svg",
@@ -22,6 +22,7 @@
     "static/media/hobbi-mockups.png": "/static/media/hobbi-mockups.2e555db7f6ddd1c4c06b.png",
     "static/media/fonts-colour-scheme.png": "/static/media/fonts-colour-scheme.c03273f7257be855e01c.png",
     "static/media/able-logos.png": "/static/media/able-logos.dc680c47a3f646bd9679.png",
+    "static/media/Ruby-Doyle-CV-Aug-2022.pdf": "/static/media/Ruby-Doyle-CV-Aug-2022.f5fbc57dad248f5cc731.pdf",
     "static/media/strawberry.svg": "/static/media/strawberry.24c5553480823ac43023250d19cc65ad.svg",
     "static/media/orange-fruitchi.svg": "/static/media/orange-fruitchi.88a143ef8371e197d180e36627be2801.svg",
     "static/media/orange.svg": "/static/media/orange.a7a2913279940448bed1c790c2ab29da.svg",
@@ -83,11 +84,11 @@
     "static/media/big-star.svg": "/static/media/big-star.0fbd67a1c51a6d8c1a58813fac3adcf8.svg",
     "static/media/small-star-yellow.svg": "/static/media/small-star-yellow.5797674066e1854e0b0781fb9c1a4418.svg",
     "static/media/small-star.svg": "/static/media/small-star.5247f7f31e049809acb7113fb864514a.svg",
-    "main.974b1b35.css.map": "/static/css/main.974b1b35.css.map",
-    "main.59c45f91.js.map": "/static/js/main.59c45f91.js.map"
+    "main.f142831b.css.map": "/static/css/main.f142831b.css.map",
+    "main.334145b9.js.map": "/static/js/main.334145b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.974b1b35.css",
-    "static/js/main.59c45f91.js"
+    "static/css/main.f142831b.css",
+    "static/js/main.334145b9.js"
   ]
 }
