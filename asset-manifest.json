@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.f37dc718.css",
+    "main.css": "/static/css/main.2f15172c.css",
     "main.js": "/static/js/main.b521b173.js",
     "static/media/stayNz-mockups.svg": "/static/media/stayNz-mockups.f93995b7f44a9176aeed44ee63e12ae5.svg",
     "static/media/earthenwares-mockups.svg": "/static/media/earthenwares-mockups.2b5da2874e4335342baab2f648cd6baf.svg",
@@ -84,11 +84,11 @@
     "static/media/big-star.svg": "/static/media/big-star.0fbd67a1c51a6d8c1a58813fac3adcf8.svg",
     "static/media/small-star-yellow.svg": "/static/media/small-star-yellow.5797674066e1854e0b0781fb9c1a4418.svg",
     "static/media/small-star.svg": "/static/media/small-star.5247f7f31e049809acb7113fb864514a.svg",
-    "main.f37dc718.css.map": "/static/css/main.f37dc718.css.map",
+    "main.2f15172c.css.map": "/static/css/main.2f15172c.css.map",
     "main.b521b173.js.map": "/static/js/main.b521b173.js.map"
   },
   "entrypoints": [
-    "static/css/main.f37dc718.css",
+    "static/css/main.2f15172c.css",
     "static/js/main.b521b173.js"
   ]
 }
