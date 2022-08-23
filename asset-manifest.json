@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2f15172c.css",
-    "main.js": "/static/js/main.b521b173.js",
+    "main.js": "/static/js/main.8a8512da.js",
     "static/media/stayNz-mockups.svg": "/static/media/stayNz-mockups.f93995b7f44a9176aeed44ee63e12ae5.svg",
     "static/media/earthenwares-mockups.svg": "/static/media/earthenwares-mockups.2b5da2874e4335342baab2f648cd6baf.svg",
     "static/media/able-mockup-page.svg": "/static/media/able-mockup-page.06695a053065f09c90278a888dad8f77.svg",
@@ -21,8 +21,8 @@
     "static/media/materielle-mockups.png": "/static/media/materielle-mockups.a6bbc7486eaf0d4c06c9.png",
     "static/media/hobbi-mockups.png": "/static/media/hobbi-mockups.2e555db7f6ddd1c4c06b.png",
     "static/media/fonts-colour-scheme.png": "/static/media/fonts-colour-scheme.c03273f7257be855e01c.png",
+    "static/media/Ruby-Doyle-CV-2022-Aug.pdf": "/static/media/Ruby-Doyle-CV-2022-Aug.f12c34471c979ff6ccbf.pdf",
     "static/media/able-logos.png": "/static/media/able-logos.dc680c47a3f646bd9679.png",
-    "static/media/Ruby-Doyle-CV-Aug-2022.pdf": "/static/media/Ruby-Doyle-CV-Aug-2022.f5fbc57dad248f5cc731.pdf",
     "static/media/strawberry.svg": "/static/media/strawberry.24c5553480823ac43023250d19cc65ad.svg",
     "static/media/orange-fruitchi.svg": "/static/media/orange-fruitchi.88a143ef8371e197d180e36627be2801.svg",
     "static/media/orange.svg": "/static/media/orange.a7a2913279940448bed1c790c2ab29da.svg",
@@ -85,10 +85,10 @@
     "static/media/small-star-yellow.svg": "/static/media/small-star-yellow.5797674066e1854e0b0781fb9c1a4418.svg",
     "static/media/small-star.svg": "/static/media/small-star.5247f7f31e049809acb7113fb864514a.svg",
     "main.2f15172c.css.map": "/static/css/main.2f15172c.css.map",
-    "main.b521b173.js.map": "/static/js/main.b521b173.js.map"
+    "main.8a8512da.js.map": "/static/js/main.8a8512da.js.map"
   },
   "entrypoints": [
     "static/css/main.2f15172c.css",
-    "static/js/main.b521b173.js"
+    "static/js/main.8a8512da.js"
   ]
 }
